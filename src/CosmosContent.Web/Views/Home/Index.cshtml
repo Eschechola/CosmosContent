@@ -1,0 +1,43 @@
+﻿@model IndexViewModel
+
+@{
+    ViewData["Title"] = "Listar Conteudos";
+}
+
+<div class="text-center">
+    @if (Model.Contents == null || Model.Contents.Count == 0)
+    {
+        <br /><br />
+        <p>Não foram encontrados nenhum conteúdo em registro.</p>
+    }
+    else
+    {
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col" class="text-left">#</th>
+                    <th scope="col" class="text-left">Id</th>
+                    <th scope="col" class="text-left">Theme</th>
+                    <th scope="col">Deletar</th>
+                    <th scope="col">Alterar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(int i = 0; i < Model.Contents.Count; i++)
+                {
+                    <tr>
+                        <th scope="col" class="text-left">@(i+1)</th>
+                        <th scope="col" class="text-left">@Model.Contents[i].Id</th>
+                        <th scope="col" class="text-left">@Model.Contents[i].GetBriefingProperty("Theme")</th>
+                        <th scope="col">
+                            <a href="/deletar-conteudo/@Model.Contents[i].Id" class="text-danger">Deletar</a>
+                        </th>
+                        <th scope="col">
+                            <a href="/alterar-conteudo/@Model.Contents[i].Id" class="text-warning">Alterar</a>
+                        </th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

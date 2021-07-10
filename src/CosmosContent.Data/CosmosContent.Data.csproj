@@ -1,0 +1,67 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\microsoft.azure.cosmos\3.19.0\contentFiles\any\netstandard2.0\ThirdPartyNotice.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.19.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.12.4" />
+    <PackageReference Include="MongoDB.Driver.Core" Version="2.12.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/libzstd.dll" Link="Compression\libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy64.dll" Link="Compression\snappy64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy32.dll" Link="Compression\snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/libzstd.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy32.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\Lucas\.nuget\packages\mongodb.driver.core\2.12.4\build\../runtimes/win/native/snappy64.dll" />
+  </ItemGroup>
+
+</Project>

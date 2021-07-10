@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Criar Conteudo";
+}
+
+<section class="modal-dialog-centered justify-content-md-center col-sm-12">
+    <form method="post" action="/criar-conteudo" class="col-sm-8">
+        @Html.AntiForgeryToken()
+
+        <label>Tema do conteúdo</label>
+        <input type="text"
+               class="form-control"
+               name="Theme"
+               placeholder="Natureza, Parques, Arvores..." />
+
+        <br /><br />
+
+        <label>Área de negócio</label>
+        <input type="text"
+               class="form-control"
+               name="BusinessArea"
+               placeholder="Socio Ambiental, Agronegocio..." />
+
+        <br /><br />
+
+        <label>Resumo do conteúdo</label>
+        <textarea rows="3"
+                  class="form-control"
+                  name="Observations"
+                  placeholder="Desejo que o contéudo tenha uma linha filosófica..."></textarea>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="text-center">
+            <button type="submit"
+                    class="btn btn-primary">
+                Cadastrar
+            </button>
+        </div>
+    </form>
+</section>

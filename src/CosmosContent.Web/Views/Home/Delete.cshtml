@@ -1,0 +1,58 @@
+﻿@model DeleteViewModel
+
+@{
+    ViewData["Title"] = "Deletar Conteudo";
+}
+
+<section class="modal-dialog-centered justify-content-md-center col-sm-12">
+    <form method="post" action="/deletar-conteudo" class="col-sm-8">
+        
+        <h5 class="alert-warning" style="padding: 30px">Deseja realmente deletar esse conteúdo?</h5>
+        <br /><br />
+
+        <label>Id do conteúdo</label>
+        <input type="text"
+               class="form-control"
+               name="Id"
+               placeholder=""
+               value="@Model.Id"
+               readonly />
+
+        <br /><br />
+
+        <label>Tema do conteúdo</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Natureza, Parques, Arvores..."
+               value="@Model.Theme"
+               readonly />
+
+        <br /><br />
+
+        <label>Área de negócio</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Socio Ambiental, Agronegocio..."
+               value="@Model.BusinessArea"
+               readonly />
+
+        <br /><br />
+
+        <label>Resumo do conteúdo</label>
+        <textarea rows="3"
+                  class="form-control"
+                  placeholder="Desejo que o contéudo tenha uma linha filosófica..."
+                  value="@Model.Observations"
+                  readonly>@Model.Observations</textarea>
+        <br />
+        <br />
+        <br />
+
+        <div class="text-center">
+            <button type="submit"
+                    class="btn btn-primary">
+                Confirmar
+            </button>
+        </div>
+    </form>
+</section>

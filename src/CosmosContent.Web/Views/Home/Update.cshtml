@@ -1,0 +1,56 @@
+﻿@model UpdateViewModel
+
+@{
+    ViewData["Title"] = "Alterar Conteudo";
+}
+
+<section class="modal-dialog-centered justify-content-md-center col-sm-12">
+    <form method="post" action="/alterar-conteudo" class="col-sm-8">
+        @Html.AntiForgeryToken()
+
+        <label>Id do conteúdo</label>
+        <input type="text"
+               class="form-control"
+               name="Id"
+               placeholder=""
+               value="@Model.Id"
+               readonly />
+        
+        <br /><br />
+
+        <label>Tema do conteúdo</label>
+        <input type="text"
+               class="form-control"
+               name="Theme"
+               placeholder="Natureza, Parques, Arvores..."
+               value="@Model.Theme"/>
+
+        <br /><br />
+
+        <label>Área de negócio</label>
+        <input type="text"
+               class="form-control"
+               name="BusinessArea"
+               placeholder="Socio Ambiental, Agronegocio..."
+               value="@Model.BusinessArea"/>
+
+        <br /><br />
+
+        <label>Resumo do conteúdo</label>
+        <textarea rows="3"
+                  class="form-control"
+                  name="Observations"
+                  placeholder="Desejo que o contéudo tenha uma linha filosófica...">@Model.Observations</textarea>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="text-center">
+            <button type="submit"
+                    class="btn btn-primary">
+                Atualizar
+            </button>
+        </div>
+    </form>
+</section>
